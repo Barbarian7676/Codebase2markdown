@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Codebase to Markdown Converter</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            padding-top: 20px;
+        }
+        .container {
+            max-width: 600px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2 class="mb-4">Convert Your Codebase to Markdown</h2>
+        <form id="upload-form" action="/upload" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="folderInput">Select Folder:</label>
+                <input type="file" class="form-control-file" id="folderInput" name="file" webkitdirectory directory multiple>
+            </div>
+            <div class="form-group">
+                <label for="extensionFilter">File Extensions To Search For:</label>
+                <input type="text" class="form-control" id="extensionFilter" name="extension_filter" value=".py" placeholder="e.g., .py,.js">
+                <small class="form-text text-muted">Comma-separated (e.g., .py,.js).</small>
+            </div>
+            <div class="form-group">
+                <label for="outputFileName">Output File:</label>
+                <input type="text" class="form-control" id="outputFileName" name="output_file_name" placeholder="output_markdown.md">
+            </div>
+            <button type="submit" class="btn btn-primary">Convert</button>
+        </form>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
